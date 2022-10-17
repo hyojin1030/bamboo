@@ -4,8 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green"
     tools:context=".MainActivity">
 
-    <include layout="@layout/layout_top_title" />
+    <include android:id="@+id/top_title" layout="@layout/layout_top_title" />
+
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/top_title"
+        android:background="@drawable/background_style"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:text="공지사항"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <include android:id="@+id/drawerMenu" layout="@layout/layout_menu"/>
 
 </RelativeLayout>
