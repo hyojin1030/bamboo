@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp">
+
+        <ImageView
+            android:id="@+id/btn_menu"
+            android:onClick="onClickMenu"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/icon_menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+        <ImageView
+            android:id="@+id/btn_exit"
+            android:onClick="onClickExit"
+            android:visibility="gone"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/icon_cross"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:text="대나무숲"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"/>
+
+    <LinearLayout
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp">
+
+        <ImageView
+            android:onClick="onClickCheck"
+            android:id="@+id/btn_check"
+            android:visibility="gone"
+            android:src="@drawable/icon_check"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <ImageView
+            android:onClick="onClickEdit"
+            android:id="@+id/btn_edit"
+            android:visibility="gone"
+            android:src="@drawable/icon_edit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
