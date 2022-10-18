@@ -4,9 +4,6 @@ plugins {
     id 'com.google.gms.google-services'
 }
 
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
 android {
     compileSdk 32
 
@@ -16,9 +13,6 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
-
-        buildConfigField "String", "GOOGLE_CLIENT_ID", properties['google_client_id']
-        buildConfigField "String", "GOOGLE_CLIENT_PASSWORD", properties['google_client_secret']
     }
 
     buildTypes {

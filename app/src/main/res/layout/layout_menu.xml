@@ -1,25 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layout_menu"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:layout_width="0dp"
-    android:layout_height="0dp">
+    android:orientation="vertical"
+    android:layout_gravity="start"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
         android:background="@color/white"
-        android:layout_width="300dp"
-        android:layout_height="match_parent">
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_menu_user"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/icon_user"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
         <TextView
-            android:text="안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요"
+            android:id="@+id/txt_menu_nickname"
+            android:text="닉네임"
+            android:textSize="20dp"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <ImageView
+            android:id="@+id/btn_menu_mypage"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/icon_user"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
     </LinearLayout>
 
+    <View
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
 
-</androidx.drawerlayout.widget.DrawerLayout>
+    <ListView
+        android:id="@+id/listview_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>
